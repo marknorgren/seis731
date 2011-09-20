@@ -1,5 +1,6 @@
 import math
 import string
+import csv
 from collections import Counter
 
 d1 = open('d1.txt', 'rb')
@@ -14,8 +15,24 @@ totalNumberOfDocs = 3
 d1WordList = d1.readlines().pop().rsplit()
 d2WordList = d2.readlines().pop().rsplit()
 d3WordList = d3.readlines().pop().rsplit()
-vocabulary = vocab.readlines().pop().rsplit()
+#vocabulary = vocab.readlines().pop().rsplit()
+
+v = vocab.readlines()
+print v
+vocab = []
+for x in v:
+    vocab.append(x.rstrip())
+    
+print 'Vocab Length: %d' % len(vocab)
+print vocab
+
+my_dict = zip(vocab, d1WordList)
+print my_dict
+
+
+
 docList = [d1WordList, d2WordList, d3WordList]
+'''
 print '\n**************************************'
 for d in docList:
     print d
@@ -39,6 +56,8 @@ docList = docListNoPunctuation
 print '\n**************************************'
 for d in docList:
     print d
+'''
+
 
 
 largestTermCountInADocument = float(0)
@@ -101,12 +120,12 @@ def inverseDocumentFrequency(term):
     return idf
     #log(3, 2)
 
-def termWeight(twWordList, twTerm):
+def term_weight(twWordList, twTerm):
     tf = termFrequency(twWordList, twTerm)
     idf = inverseDocumentFrequency(twTerm)
     #print '  tf: %f' % float(tf)
     #print '  idf: %f' % float(idf)
-    return tf * idf
+    return round((tf * idf), 2)
 
 #init
 largestTermCountInADocument(docList)
@@ -115,9 +134,27 @@ for index, d in enumerate(docList):
     print 'Document ' + str(index+1)
     for w in d:
         print '  Term: ' + w
-        print '    TermWeight: %f' % termWeight(d, w)
+        _term_weight = term_weight(d, w)
+        #fict dictionary with values
+        my_dict = {}
+        for vocab_word in vocab:
+            if vocab_word in d:
+                my_dict[vocab_word] = _term_weight
+            else:
+                my_dict[vocab_word] = 0
+        print '    TermWeight: %f' % _term_weight
+    print my_dict
+
+f = open('csv.txt', 'wt')
+
+writer = csv.writer(f)
+    
 
 
+print my_dict
+writer.writerow(my_dict.keys())
+writer.writerow(my_dict.values())
+f.close()
 d1.close()
 d2.close()
 d3.close()
