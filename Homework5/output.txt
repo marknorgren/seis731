@@ -1,0 +1,78 @@
+
+Raw term count:
+D1.txt a 1
+D1.txt brown 2
+D1.txt dog 1
+D1.txt fox 1
+D1.txt jumps 1
+D1.txt lazy 1
+D1.txt over 1
+D1.txt quick 1
+D1.txt the 1
+D2.txt bud 1
+D2.txt for 1
+D2.txt jigs 1
+D2.txt nymph 1
+D2.txt quick 1
+D2.txt vex 1
+D2.txt waltz 1
+D3.txt daft 1
+D3.txt how 1
+D3.txt jumping 1
+D3.txt quickly 1
+D3.txt vex 1
+D3.txt zebras 1
+
+Maxterm Dict:
+D1.txt 2
+D2.txt 1
+D3.txt 1
+
+DocFreq:
+a 1
+brown 1
+bud 1
+daft 1
+dog 1
+for 1
+fox 1
+how 1
+jigs 1
+jumping 1
+jumps 1
+lazy 1
+nymph 1
+over 1
+quick 2
+quickly 1
+the 1
+vex 2
+waltz 1
+zebras 1
+D3.txt
+2
+
+Term Weights:
+
+D1.txt a 0.79
+D1.txt brown 1.58
+D1.txt dog 0.79
+D1.txt fox 0.79
+D1.txt jumps 0.79
+D1.txt lazy 0.79
+D1.txt over 0.79
+D1.txt quick 0.29
+D1.txt the 0.79
+D2.txt bud 0.79
+D2.txt for 0.79
+D2.txt jigs 0.79
+D2.txt nymph 0.79
+D2.txt quick 0.29
+D2.txt vex 0.29
+D2.txt waltz 0.79
+D3.txt daft 0.79
+D3.txt how 0.79
+D3.txt jumping 0.79
+D3.txt quickly 0.79
+D3.txt vex 0.29
+D3.txt zebras 0.79
