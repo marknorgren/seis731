@@ -1,0 +1,4 @@
+Doc Name,the,quick,brown,fox,jumps,over,a,lazy,dog,waltz,nymph,for,jigs,vex,bud,how,quickly,daft,jumping,zebras
+Doc: 0,0.79,0.29,1.58,0.79,0.79,0.79,0.79,0.79,0.79,0,0,0,0,0,0,0,0,0,0,0
+Doc: 1,0,0.58,0,0,0,0,0,0,0,1.58,1.58,1.58,1.58,0.58,1.58,0,0,0,0,0
+Doc: 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0.58,0,1.58,1.58,1.58,1.58,1.58
